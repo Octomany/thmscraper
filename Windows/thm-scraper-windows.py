@@ -127,5 +127,5 @@ for task in Tasks:
 f.write(File_Content)
 f.close()
 driver.quit()
-print("That's it! Everything should be saved. Thank you for using this script - Maxime Beauchamp, AKA Octomany\n")
+print("Readme file successfully created and filled.\nNow shutting down Chromedriver...")
 exit()
