@@ -14,3 +14,11 @@ Chrome installation : (Debian)
 
     wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
     sudo apt install ./google-chrome-stable_current_amd64.deb
+
+Other dependencies : 
+
+pip
+    sudo apt install python3-pip
+    
+psutil
+    sudo pip install --upgrade psutil
