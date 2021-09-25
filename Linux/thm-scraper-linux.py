@@ -9,6 +9,7 @@ from time import sleep
 from os.path import exists
 import argparse
 import psutil
+import warnings
 
 ''' 
 -----------------------------------------------------------------------------------------------------
@@ -27,7 +28,10 @@ Chrome installation : (Debian)
     wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
     sudo apt install ./google-chrome-stable_current_amd64.deb
 -----------------------------------------------------------------------------------------------------
-''' 
+'''
+
+# Changed back to the "Executable_path" way since the new method didn't work on ubuntu. Ignoring the DepcretationWarning message.
+warnings.filterwarnings("ignore", category=DeprecationWarning) 
 
 Options = Options()
 Options.add_argument('headless')
