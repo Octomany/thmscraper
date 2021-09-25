@@ -3,7 +3,6 @@
 import os
 import sys
 from selenium import webdriver
-from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.chrome.options import Options
 from datetime import date
 from time import sleep
@@ -35,9 +34,7 @@ Options.add_argument('headless')
 
 Current_Dir = os.getcwd()
 Script_Dir = sys.path[0]
-sv=Service(Script_Dir + '/chromedriver')
-sv.start()
-driver = webdriver.Chrome(service=sv, options=Options)
+driver = webdriver.Chrome(Script_Dir + '/chromedriver', options=Options)
 
 parser = argparse.ArgumentParser(description='Automatic THM Write-Up README file creator.')
 parser.add_argument('RoomName', action='store', type=str, help='Specify the room name (Taken from URL)')
